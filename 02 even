@@ -1,0 +1,17 @@
+
+
+let tSize = 40
+
+function setup() {
+    creatCanvas(windowWidth, windowHight);
+}
+
+
+function deaw() {
+    background(220);
+
+    textSize(tSize);
+    let position = mouseX + ", " + mouseY;
+    text(position, mouseX, mouseY)
+}
+
