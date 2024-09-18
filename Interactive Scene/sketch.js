@@ -21,5 +21,12 @@ function drawCircles(){
   line(50,100,80,130)
 
   line(20,80,80,80)
-  //hi jim
+  
+
+  // Top-left.
+  arc(400, 55, 70, 70, PI, 2*PI)
+
+
+
+  
 }
