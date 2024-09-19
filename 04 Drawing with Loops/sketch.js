@@ -20,9 +20,9 @@ function myForeground(){
   //use FOR / WHITE loops to draw on the canvas
   // loop var     confition   ;  var modification
   // x:  0  40  80  120
-  for (let x = 0 ; x < mouseX ; x = x + 1){
+  for (let x = 0 ; x < mouseX ; x = x + 40){
     fill(0);
-    circle(x, hight/2, 40);
+    circle(x, height/2, 40);
     fill(255);
     text(x, x,height/2);
   }
