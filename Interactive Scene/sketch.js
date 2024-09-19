@@ -24,7 +24,9 @@ function drawCircles(){
   
 
   // Top-left.
-  arc(400, 55, 70, 70, PI, 2*PI)
+  fill(239, 0, 225)
+  arc(200, 505, 70, 70, PI, 2*PI)
+
 
 
 
