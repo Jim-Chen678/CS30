@@ -5,24 +5,52 @@ function setup() {
 
 function draw() {
   background(220);
-  drawCircles(mouseX, mouseY); // Pass mouse coordinates to drawCircles
+  people(mouseX, mouseY); // Pass mouse coordinates to drawCircles
+}
+function isTouchingBurger(x,y){
+noFill()
+let personCircle=80
+let burgerCircle=80
+circle(x,y,personCircle)
+circle(200,520,burgerCircle)
+print(dist(x,y,200,520), personCircle+burgerCircle/100)
+if(dist(x,y,200,520) < personCircle+burgerCircle/100){
+  return true;
+
+}
+else return false;
 }
 
-function drawCircles(x, y) {
+
+function people(x, y) {
   // People person
   fill(239, 238, 225);
   circle(x, y, 25); // Head
 
   line(x, y + 13, x, y + 40); // Body
-  line(x, y + 40, x - 30, y + 70); // Left leg
-  line(x, y + 40, x + 30, y + 70); // Right leg
-  line(x - 20, y + 30, x + 20, y + 30); // Arms
+  
+  if (isTouchingBurger(x, y+30)) {
+    // If touching, draw the body as a circle
+    fill(239, 238, 225)
+    circle(x, y + 25, 40); 
+    
+  } else {
+  
+    line(x, y + 13, x, y + 40); // Body
+   
 
-    // Draw the burger
-    drawBurger(200, 505);
   }
 
-  function drawBurger(x, y) {
+  line(x, y + 40, x - 30, y + 70); // Left leg
+  line(x, y + 40, x + 30, y + 70); // Right leg
+  line(x - 20, y + 20, x + 20, y + 20); // Arms
+
+
+  burger();
+
+  }
+
+  function burger() {
 
 
   
